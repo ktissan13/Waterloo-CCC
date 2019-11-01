@@ -15,11 +15,15 @@ if 1 <= m <= n <= 32000:
         for elem in reversed(range(len(string))):
             if string[elem] == '1' or string[elem] ==  '8' or string[elem] == '0':
                 temp += 1
-            if num > 10:
-                if string[elem] == '6' or string[elem] == '9':
-                    temp += 1
-            backwards += string[elem]
+                backwards += string[elem]
+            elif string[elem] == '6':
+                temp += 1
+                backwards += '9'
+            elif string[elem] == '9':
+                temp += 1
+                backwards += '6'
         if len(string) == temp and string == backwards:
             final += 1
+
 
 print(final)
