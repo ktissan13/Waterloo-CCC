@@ -5,11 +5,11 @@
 
 import math
 
-#x = int(input())
+x = int(input())
 
-final = 2.56//1
+final = math.sqrt(x)
 
-#if x != final**2:
-    #final -= 1
+if 
+    final -= 1
 
 print('The largest square has side length {}.'.format(final))
