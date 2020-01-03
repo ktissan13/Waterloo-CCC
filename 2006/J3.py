@@ -5,10 +5,10 @@
 
 text = []
 status = True
-_1_press_letters = ['a','d','g','j','m','p','t','w']
-_2_press_letters = ['b','e','h','k','n','q','u','x']
-_3_press_letters = ['c','f','i','l','o','r','v','y']
-_4_press_letters = ['s','z']
+_1_press_letters = ['a', 'd', 'g', 'j', 'm', 'p', 't', 'w']
+_2_press_letters = ['b', 'e', 'h', 'k', 'n', 'q', 'u', 'x']
+_3_press_letters = ['c', 'f', 'i', 'l', 'o', 'r', 'v', 'y']
+_4_press_letters = ['s', 'z']
 
 while (status):
     current_text = input("Enter text: ")
@@ -16,6 +16,7 @@ while (status):
         status = False
     else:
         text.append(current_text.lower())
+
 
 last_letter = ''
 
@@ -27,9 +28,9 @@ for string in text:
     for letter in string:
         if letter == last_letter:
             seconds += 2
-            different_letter = False 
+            different_letter = False
         else:
-            different_letter = True 
+            different_letter = True
         if letter in _1_press_letters:
             seconds += 1
             if different_letter:

@@ -3,19 +3,14 @@
 # ICS4U0
 # November 5 2019
 
-#a = input()
-#b = input()
-#c = input()
+a = 'THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG'
+b = 'UIFARVJDLACSPXOAGPYAKVNQTAPWFSAUIFAMB ZAEPH'
+c = 'XFABSFAWFSZACBEAQFPQMFAEPJOHAWFSZACBEAUIJOHTAIBAIB'
 
 space = 32
 min = 65
 max = 90
 period = 46
-
-a = "THERE ARE NOT ENOUGH LETTERS"
-b = "XQAZASEZASNYXSANYLWQSTAXXAZM"
-c = "XFABSFAWFSZACBEAQFPQMFAEPJOHAWFSZACBEAUIJOHTAIBAIB"
-
 
 final = ''
 i = 0
@@ -29,8 +24,8 @@ for char in b:
             new_letter = min
         else:
             new_letter = max
-    else:
-        new_letter = ord(char) + constant
+    els
+    new_letter = ord(char) + constant
     if not min <= new_letter <= max:
         if min > new_letter and (min-new_letter) != 1 and (min-new_letter) > 0:
             new_letter = min + (min - new_letter)
@@ -41,4 +36,4 @@ for char in b:
     final += chr(new_letter)
 
 print(final)
-print(constant,ord('b'),ord(' '),ord('Q'))
+print(constant, ord('b'), ord(' '), ord('Q'))
