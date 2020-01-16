@@ -3,7 +3,7 @@
 # ICS 3U0
 # May 14 2019
 
-status =  True
+status = True
 turns = []
 streets = []
 
@@ -16,23 +16,17 @@ while (status):
         status = False
     else:
         streets.append(current_street.upper())
+street = len(streets)-2
 
-street = 0
-
-for turn in turns:
+for turn in reversed(turns):
     if turn == "L":
-        if streets[street] == "HOME":
+        if street == -1:
             print("Turn RIGHT into your HOME.")
         else:
             print("Turn RIGHT onto", streets[street], "street.")
     if turn == "R":
-        if streets[street] == "HOME":
+        if street == -1:
             print("Turn LEFT into your HOME.")
         else:
             print("Turn LEFT onto", streets[street], "street.")
-    street += 1
-        
-
-
-    
-    
+    street -= 1
